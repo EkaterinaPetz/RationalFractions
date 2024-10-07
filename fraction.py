@@ -1,7 +1,7 @@
 from math import gcd
 
 class RationalFraction:
-    def __init__(self, num, denom):
+    def __init__(self, num, denom=1):
         self.num = num
         if denom == 0:
             print("Деление на 0 невозможно! Знаминатель заменён на 1")
@@ -51,22 +51,3 @@ class RationalFraction:
     def fr_add_int(self, integ):
         fr2 = RationalFraction(integ, 1)
         return self + fr2
-
-
-r1 = RationalFraction(4,16)
-print(r1)
-
-r2 = r1 + RationalFraction(1,3)
-print(r2)
-
-print(r1*r2)
-
-print(r1 - r2)
-
-print(r1/r2)
-
-print(r1**2)
-
-print(r2.fr_add_int(5))
-
-print(RationalFraction(5,0))
